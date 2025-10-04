@@ -1,0 +1,73 @@
+.weekDayWrapper {
+    min-height: calc(100vh - 120px);
+    min-width: 100px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    flex: 1;
+    transition: transform 0.2s ease-out;
+
+    &.dropOver {
+        transform: scale(1.02);
+
+        .weekDayContent {
+            background: linear-gradient(135deg,
+                    var(--bg-hightlight) 0%,
+                    var(--bg-secondary) 100%);
+            border: 2px dashed var(--interactive);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            animation: breathe 1s ease-in-out infinite;
+        }
+    }
+}
+
+@keyframes breathe {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.01);
+    }
+}
+
+.weekDayHeader {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    transition: color 0.2s;
+
+    .dropOver & {
+        color: var(--interactive);
+        font-weight: 700;
+    }
+}
+
+.weekDayContent {
+    background: var(--bg-secondary);
+    padding: 5px;
+    height: 100%;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.weekDayTitle {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text-tertiary);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: color 0.2s;
+
+    &.active {
+        color: var(--text-hightlight);
+        font-weight: 700;
+    }
+}

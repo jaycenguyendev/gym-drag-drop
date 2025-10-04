@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+:root {
+  --text-primary: #5a57cb;
+  --text-secondary: #6a7988;
+  --text-tertiary: #728096;
+  --text-hightlight: #5a57cb;
+
+  --bg-primary: #ffffffcc;
+  --bg-secondary: #f3f5f8;
+  --bg-tertiary: #dfdfdf;
+  --bg-hightlight: #8dadbd;
+
+  --interactive: #a0a8b1;
+  --active: #aac8d9;
+  --hightlight: #1313ec;
+}

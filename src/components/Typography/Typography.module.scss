@@ -1,0 +1,29 @@
+%ellipsisOverflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.h5 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    @extend %ellipsisOverflow;
+}
+
+.h6 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    @extend %ellipsisOverflow;
+}
+
+.body1 {
+    font-weight: 700;
+    color: #919cad;
+}
+
+.body2 {
+    font-weight: 400;
+    color: #95a6b7;
+    @extend %ellipsisOverflow;
+}

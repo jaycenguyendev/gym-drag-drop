@@ -1,0 +1,27 @@
+.exerciseWrapper {
+    border: 1px solid #dfdfdf;
+    border-radius: 3px;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 0 0 1px;
+    cursor: grab;
+    transition: border-color 0.2s, box-shadow 0.2s;
+
+    &:active {
+        cursor: grabbing;
+    }
+
+    &.hovering {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.exerciseHeader {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.exerciseDetail {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
